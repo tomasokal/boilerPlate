@@ -1,15 +1,14 @@
 
-import { Clone, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 
 export default function Model()
 {
-    const model = useGLTF('./hamburger-draco.glb')
+    const model = useGLTF('./vintage_boiler.glb')
     
     return <>
-        <Clone object={ model.scene } scale={ 0.35 } position-x={ - 4 } />
-        <Clone object={ model.scene } scale={ 0.35 } position-x={ 0 } />
-        <Clone object={ model.scene } scale={ 0.35 } position-x={ 4 } />
+        <primitive object={ model.scene } scale={ 2.5 } position-y={ -5 } />
+        {/* <object={ model.scene } scale={ 2.5 } position-y={ -5 } /> */}
     </>
 }
 
-useGLTF.preload('./hamburger-draco.glb')
+useGLTF.preload('./vintage_boiler.glb')
