@@ -1,8 +1,10 @@
 import './style.css'
-import ReactDOM from 'react-dom/client'
+import * as ReactDOM from 'react-dom/client'
 import { StrictMode, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
+
 import Experience from './Experience.js'
+import Interface from './Interface'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -20,5 +22,6 @@ root.render(
                 <Experience /> 
             </Suspense>  
         </Canvas>
+        <Interface />
     </StrictMode>
 )

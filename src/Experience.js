@@ -1,4 +1,3 @@
-
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
@@ -10,7 +9,6 @@ import Lights from './Lights'
 
 export default function Experience()
 {
-
   const ref = useRef()
 
   const clicked = useIcon((state) => state.iconRotate)
@@ -28,8 +26,9 @@ export default function Experience()
     <OrbitControls />
     <Lights />
 
-    <Model ref={ref} />
+        <group ref={ref}>
+            <Model />
+        </group>
           
   </>
-
 }
